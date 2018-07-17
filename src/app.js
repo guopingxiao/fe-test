@@ -1,13 +1,12 @@
-const http = require('http') 
+const http = require('http')
 const Koa = require('koa')
-const path= require('path')
+const path = require('path')
 const views = require('koa-views')
 const convert = require('koa-convert')
 const json = require('koa-json')
-const Bodyparser = require('koa-bodyparser') 
-const logger = require('koa-logger') 
-const koaStatic =require('koa-static-plus') 
-const config = require('./config')
+const Bodyparser = require('koa-bodyparser')
+const logger = require('koa-logger')
+const koaStatic = require('koa-static-plus')
 
 const app = new Koa()
 const bodyparser = Bodyparser()
@@ -26,11 +25,6 @@ app.use(convert(koaStatic(path.join(__dirname, '../public'), {
 app.use(views(path.join(__dirname, '../views'), {
   extension: 'ejs'
 }))
-
-// 500 error
-koaOnError(app, {
-  template: 'views/500.ejs'
-})
 
 // logger
 app.use(async (ctx, next) => {
@@ -56,7 +50,7 @@ app.on('error', async (err, ctx) => {
   console.log('error occured:', err)
 })
 
-const port = parseInt(config.port || '3000')
+const port = parseInt('3000')
 const server = http.createServer(app.callback())
 
 server.listen(port)
