@@ -11,7 +11,9 @@
     "clean": "rm -rf app/",
     "test": "mocha -u bdd --compilers js:babel-core/register",
     "dev": "npm start",
-    "jest-assert":"jest __tests__/assert.test.js"
+    "jest-assert":"jest __tests__/assert.test.js",
+    "jest-mock":"jest __tests__/mock.test.js",
+    "jest-mockFn":"jest __tests__/mockFn.test.js"
   },
   "engines": {
     "node": ">= 4"
