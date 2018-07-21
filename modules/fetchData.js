@@ -12,6 +12,10 @@ module.exports = {
     })
   },
   fetchDataAsync: async () => { 
-
+    return new Promise((resolve) => { 
+      setTimeout(() => {
+        resolve('peanut buffer')
+      }, 1000)
+    })
   }
 }
