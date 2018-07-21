@@ -1,5 +1,5 @@
 // createModule.js
-const getRandom = require('./getRandom')
+const getRandom = require('./getNumber').getRandom
 
 module.exports = function createModule (name) {
   return {

@@ -33,6 +33,7 @@ describe('======= 测试断言 =======', () => {
   })
 })
 
+/** 支持自定义扩展 */
 expect.extend({
   toBeEven (received) {
     const even = (received % 2 === 0)

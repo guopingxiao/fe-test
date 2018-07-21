@@ -6,5 +6,7 @@ getRandom.__set = function (_num) {
   num = _num
 }
 
-module.exports = getRandom
+module.exports = {
+  getRandom
+}
 
